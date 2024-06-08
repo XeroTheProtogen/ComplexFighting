@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "keno.net.complex_fighting.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "client.ClientPlayerEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

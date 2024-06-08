@@ -1,0 +1,51 @@
+{
+	"schemaVersion": 1,
+	"id": "complex_fighting",
+	"version": "${version}",
+	"name": "Complex Fighting",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/complex_fighting/icon.png",
+	"environment": "*",
+	"custom": {
+		"cardinal-components": [
+			"complex_fighting:stamina"
+		]
+	},
+	"entrypoints": {
+		"main": [
+			"keno.net.complex_fighting.ComplexFighting"
+		],
+		"client": [
+			"keno.net.complex_fighting.CFClient"
+		],
+		"server": [
+			"keno.net.complex_fighting.CFServer"
+		],
+		"fabric-datagen": [
+			"keno.net.complex_fighting.ComplexFightingDataGenerator"
+		],
+		"cardinal-components": [
+			"keno.net.complex_fighting.components.cardinal.CFCardiComponents"
+		]
+	},
+	"mixins": [
+		"complex_fighting.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.6",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
