@@ -57,7 +57,7 @@ public class StaminaComponent implements StaminaComponentInterface, AutoSyncedCo
     @Override
     public void tick() {
         if (!this.provider.isInCreativeMode()) {
-            if (this.provider.isSprinting() && this.getStamina() > STAMINA_BASE) {
+            if ((this.provider.isSprinting() || this.provider.isSwimming()) && this.getStamina() > STAMINA_BASE) {
                 decrementStamina();
             } else {
                 incrementStamina();

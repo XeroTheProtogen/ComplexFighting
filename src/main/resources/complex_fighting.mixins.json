@@ -5,6 +5,9 @@
   "client": [
     "client.ClientPlayerEntityMixin"
   ],
+  "mixins": [
+    "common.PlayerEntityMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   }
