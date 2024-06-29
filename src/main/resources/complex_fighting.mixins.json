@@ -8,6 +8,9 @@
   "mixins": [
     "common.PlayerEntityMixin"
   ],
+  "server": [
+    "server.LivingEntityMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   }

@@ -16,7 +16,7 @@ import net.minecraft.util.Identifier;
 import org.joml.Matrix4f;
 
 @Environment(EnvType.CLIENT)
-public class StaminaDisplayHandler implements HudRenderCallback {
+public class HudDisplayHandler implements HudRenderCallback {
     // Stamina texture (Will make outline more bright tmrw)
     private final Identifier STAMINA_BORDER_TEXTURE = ComplexFighting.modLoc("textures/hud/stamina_bar_border.png");
 
@@ -28,12 +28,15 @@ public class StaminaDisplayHandler implements HudRenderCallback {
         BufferBuilder buffer = tessellator.getBuffer();
         ClientPlayerEntity player = MinecraftClient.getInstance().player;
 
-
         RenderSystem.enableBlend();
-        renderStaminaBar(buffer, tessellator, stack, positionMatrix, drawContext, player);
+        assert player != null;
+        if (!player.isInCreativeMode()) {
+            StaminaComponent stamina = CFCardiComponents.STAMINA.get(player);
+            if (stamina.getStamina() < 200) {
+                renderStaminaBar(buffer, tessellator, stack, positionMatrix, drawContext, player);
+            }
+        }
         RenderSystem.disableBlend();
-
-        // drawContext.fill(100, 10, 330, 20, 0, color);
     }
 
     public void renderStaminaBar(BufferBuilder buffer, Tessellator tessellator, MatrixStack stack, Matrix4f positionMatrix, DrawContext context, ClientPlayerEntity player) {

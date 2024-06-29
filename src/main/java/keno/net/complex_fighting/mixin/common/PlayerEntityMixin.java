@@ -2,6 +2,7 @@ package keno.net.complex_fighting.mixin.common;
 
 import keno.net.complex_fighting.components.cardinal.CFCardiComponents;
 import keno.net.complex_fighting.components.cardinal.stamina.StaminaComponent;
+import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;

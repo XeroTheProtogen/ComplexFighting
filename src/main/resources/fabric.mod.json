@@ -16,7 +16,8 @@
 	"environment": "*",
 	"custom": {
 		"cardinal-components": [
-			"complex_fighting:stamina"
+			"complex_fighting:stamina",
+			"complex_fighting:posture"
 		]
 	},
 	"entrypoints": {
